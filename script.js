@@ -11,13 +11,30 @@ var consol = document.getElementById("consol");
 var prin = document.getElementById("print");
 
 var click = 0;
-btn.addEventListener("click", () => {
+
+//With if :
+
+/*btn.addEventListener("click", () => {
   if (click == 0) {
     img.src = "./pic_bulbon.gif";
     click += 1;
   } else {
     img.src = "./pic_bulboff.gif";
     click = 0;
+  }
+});*/
+
+//With Switch Case :
+btn.addEventListener("click", function () {
+  switch (click) {
+    case 0:
+      img.src = "./pic_bulbon.gif";
+      click += 1;
+      break;
+    default:
+      img.src = "./pic_bulboff.gif";
+      click = 0;
+      break;
   }
 });
 
